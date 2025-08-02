@@ -68,7 +68,10 @@
           </FormItem>
         </FormField>
       </form>
-      <Alert variant="destructive">
+      <Alert
+        v-if="isError"
+        variant="destructive"
+      >
         <XCircle />
         <AlertTitle>Erreur</AlertTitle>
         <AlertDescription>
