@@ -15,7 +15,7 @@ import PaintingDialog from "@/components/paintings/PaintingDialog.vue";
 
 import { supabase } from "@/lib/supabase-client";
 
-import { type Painting } from "@/types";
+import type { Painting } from "@/types";
 
 const paintings = ref<Painting[]>([]);
 

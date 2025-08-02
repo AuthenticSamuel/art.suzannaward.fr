@@ -17,7 +17,7 @@ import { useFilter } from "@/composables/useFilter";
 
 import { supabase } from "@/lib/supabase-client";
 
-import { type Painting } from "@/types";
+import type { Painting } from "@/types";
 
 const { filters, onFilterChange } = useFilter();
 
