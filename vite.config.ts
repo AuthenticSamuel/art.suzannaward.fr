@@ -1,4 +1,4 @@
-import tailwindCSS from "@tailwindcss/vite";
+import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import path from "node:path";
 import { defineConfig } from "vite";
@@ -10,11 +10,16 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      "/api": "http://localhost:3000",
+    },
+  },
   plugins: [
     vue(),
     vueDevTools({
       launchEditor: "codium",
     }),
-    tailwindCSS(),
+    tailwindcss(),
   ],
 });

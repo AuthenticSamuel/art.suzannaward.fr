@@ -1,16 +1,18 @@
 <template>
-  <div>
-    Test
-    <button @click="handleButtonClick">Send event</button>
+  <div class="flex min-h-screen justify-center p-8 font-display">
+    <div class="flex w-full max-w-4xl flex-col gap-y-16">
+      <AppHeader />
+      <main>
+        <RouterView />
+      </main>
+      <AppFooter />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { usePostHog } from "@/composables/usePostHog";
+import { RouterView } from "vue-router";
 
-const { posthog } = usePostHog();
-
-const handleButtonClick = () => {
-  posthog.capture("event click", { property: "value" });
-};
+import AppFooter from "@/components/AppFooter.vue";
+import AppHeader from "@/components/AppHeader.vue";
 </script>
