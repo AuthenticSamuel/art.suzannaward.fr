@@ -6,10 +6,10 @@ export const categoryMappings: Record<Painting["category"], string> = {
   famille: "Famille",
   mystere: "Mystère",
   noel: "Noël",
-  "pas-a-vendre": "Pas en vente",
   paysage: "Paysage",
   sensualite: "Sensualité",
   zen: "Zen",
+  "pas-a-vendre": "Pas en vente",
 };
 
 export const getCategory = (painting: Painting) => {

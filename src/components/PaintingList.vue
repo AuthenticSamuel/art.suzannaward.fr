@@ -60,7 +60,11 @@ const getPaintings = async () => {
     return;
   }
 
-  paintings.value = data;
+  paintings.value = data.sort((a, b) => {
+    if (a.category > b.category) return -1;
+    if (a.category < b.category) return 1;
+    return 0;
+  });
 };
 
 onFilterChange(getPaintings);
