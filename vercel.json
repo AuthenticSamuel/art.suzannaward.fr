@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/(.*)",
+      "destination": "/"
+    },
+    {
       "source": "/relay-Vu2H/static/(.*)",
       "destination": "https://eu-assets.i.posthog.com/static/$1"
     },
